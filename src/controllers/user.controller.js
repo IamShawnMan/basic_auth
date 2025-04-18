@@ -38,24 +38,24 @@ export const userController = {
       next(error);
     }
   },
-  create: async (req, res, next) => {
-    try {
-      const body = req.body;
-      const user = new User(body);
-      await user.save();
+  // create: async (req, res, next) => {
+  //   try {
+  //     const body = req.body;
+  //     const user = new User(body);
+  //     await user.save();
 
-      res.json({
-        status: "success",
-        message: "New user created",
-        error: null,
-        data: {
-          user,
-        },
-      });
-    } catch (error) {
-      next(error);
-    }
-  },
+  //     res.json({
+  //       status: "success",
+  //       message: "New user created",
+  //       error: null,
+  //       data: {
+  //         user,
+  //       },
+  //     });
+  //   } catch (error) {
+  //     next(error);
+  //   }
+  // },
   update: async (req, res, next) => {
     try {
       const { id } = req.params;
